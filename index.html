@@ -6,75 +6,70 @@
     <title>Toss App</title>
 
     <style>
-        :root{
---bg1:#0f172a; /* slate-900 */
---bg2:#04263a; /* teal-ish */
---card:#0b1220cc;
---accent:#6ee7b7;
---muted:#a6b0c3;
---glass: rgba(255,255,255,0.04);
-}
+                 * {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+ }
 
 
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-margin:0;
-font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-background: radial-gradient(1200px 600px at 10% 10%, rgba(110,231,183,0.06), transparent 10%),
-linear-gradient(135deg,var(--bg1),var(--bg2));
-color:#e6eef6;
--webkit-font-smoothing:antialiased;
--moz-osx-font-smoothing:grayscale;
-display:flex;
-align-items:center;
-justify-content:center;
-padding:28px;
-gap:18px;
-}
+ body {
+ min-height: 100vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background: linear-gradient(135deg, #9c692e, #afad2b);
+ }
 
 
-.app{
-width:100%;
-max-width:980px;
-background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-border-radius:16px;
-box-shadow: 0 10px 30px rgba(2,6,23,0.6);
-padding:28px;
-display:grid;
-grid-template-columns: 1fr 420px;
-gap:20px;
-align-items:center;
-}
+ div {
+ background: #ffffff;
+ padding: 2rem;
+ border-radius: 20px;
+ width: 95%;
+ max-width: 420px;
+ text-align: center;
+ box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+ }
 
 
-header{
-grid-column:1/-1;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:12px;
-}
+ div h1 {
+ margin-bottom: 1.5rem;
+ font-size: 2rem;
+ color: #1f2937;
+ }
 
 
-.title{
-display:flex;flex-direction:column;gap:6px;
-}
-.title h1{margin:0;font-size:20px}
-.title p{margin:0;color:var(--muted);font-size:13px}
+/* button {
+display: flex;
+gap: 1rem;
+justify-content: center;
+flex-wrap: wrap;
+margin-bottom: 1.5rem;
+} */
 
 
-.controls{display:flex;gap:12px;flex-wrap:wrap}
+ button {
+ padding: 0.7rem 1.5rem;
+ border: none;
+ border-radius: 999px;
+ background: #9da834;
+ color: #fff;
+ font-size: 1rem;
+ cursor: pointer;
+ transition: transform 0.2s ease, background 0.2s ease;
+ }
 
 
-button.toss-btn{
-appearance:none;
-border:0;
-}
+ button:hover {
+ background: #486422;
+ transform: translateY(-2px);
+ }
     </style>
-
 </head>
 <body>
+    <div>
     <h1>Toss App</h1>
     <button onclick="toss(`Masjid`)">masjid</button>
     <button onclick="toss(`Chand`)">Chand</button>
@@ -82,6 +77,7 @@ border:0;
     <h1 id="result"></h1>
      <img id="img" width="300px" src="">
 
+     </div>
     <script src="./app.js"></script>
 </body>
 </html>
